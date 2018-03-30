@@ -1,0 +1,26 @@
+.play-button {
+  @include shift(-50%, -50%);
+  @include transitions(.2s);
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    @include transitions(.2s);
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .play {
+      @include shift(-55%, -50%);
+      width: 0; 
+      height: 0;
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 15px solid white;
+  }
+}

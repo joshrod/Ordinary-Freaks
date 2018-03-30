@@ -1,0 +1,36 @@
+.hero-intro {
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+	.hero-gif {
+		@include shift(0, -50%);
+		width: 100%;
+		height: 80%;
+		position: absolute;
+		top: 50%;
+		background-image: url('../images/of-gif.gif');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	.hero-overlay {
+		width: 100%;
+		height: 100%;
+		background: $overlay;
+
+		h3 {
+			font-size: 3rem;
+			font-weight: 300;
+			white-space: nowrap;
+		}
+	}
+
+	a {
+		@include shift(-50%, 0);
+		position: absolute;
+		bottom: 4%;
+		left: 50%;
+	}
+}

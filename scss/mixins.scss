@@ -1,0 +1,27 @@
+/*FIX TRANSLATE*/
+@mixin shift($transformX : -50%, $transformY: -50%) {
+	-webkit-transform: translate($transformX, $transformY);
+	    -ms-transform: translate($transformX, $transformY);
+	        transform: translate($transformX, $transformY);
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/* ALL TRANSITIONS */
+@mixin transitions($seconds: 0.3s) {
+	transition: all $seconds;
+}
+
+/* MEDIA QUERIES */
+
+@mixin md-mobile {
+	@media (min-width: #{$md-mobile}) {
+		@content;
+	}
+}

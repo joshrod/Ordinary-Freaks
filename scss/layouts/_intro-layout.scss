@@ -1,0 +1,23 @@
+.hero-intro {
+
+	.hero-gif {
+
+		.hero-overlay {
+
+			h3 {
+				@include shift(-50%, -50%);
+				position: absolute;
+				top: calc(50% - 4rem);
+				left: 50%;
+			}
+
+			.play-button {
+				@include shift(-50%, -50%);
+				position: absolute;
+				top: calc(50% + 2rem);
+				left: 50%;
+				cursor: pointer;
+			}
+		}
+	}
+}

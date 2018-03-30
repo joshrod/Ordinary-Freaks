@@ -1,0 +1,41 @@
+.grid-video {
+	width: 100%;
+	position: relative;
+
+	.grid-thumbnail {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	.grid-overlay {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $grid-overlay;
+
+		.grid-controls {
+			@include shift();
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			.play-button {
+				position: absolute;
+				top: calc(50% - 2rem);
+				left: 50%;
+			}
+
+			h3 {
+				margin-top: 6.5rem;
+				text-transform: uppercase;
+				font-size: 1.4rem;
+				text-align: center;
+			}
+
+			
+		}
+	}
+}

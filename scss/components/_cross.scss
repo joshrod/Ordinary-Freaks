@@ -1,0 +1,22 @@
+.cross {
+	width: 2rem;
+	height: 2.2rem;
+	position: fixed;
+	top: 3rem;
+	right: 2.2rem;
+	z-index: 5;
+	&:before, &:after {
+	  position: absolute;
+	  left: 0.8rem;
+	  content: '';
+	  height: 2.5rem;
+	  width: 0.2rem;
+	  background-color: white;
+	}
+	&:before {
+	  transform: rotate(45deg);
+	}
+	&:after {
+	  transform: rotate(-45deg);
+	}
+}

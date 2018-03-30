@@ -1,0 +1,38 @@
+footer {
+	text-align: center;
+
+	.social-media {
+		h1 {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
+
+		.icons {
+			margin: 4rem auto;
+
+			a {
+				margin-left: 1.5rem;
+				margin-right: 1.5rem;
+				display: inline-block;
+
+				img {
+					width: auto;
+					height: 2.5rem;
+				}
+			}
+		}
+	}
+	
+	.copyright {
+		margin-bottom: 2rem;
+
+		h3 {
+			font-weight: 300;
+			font-size: 1.2rem;
+		}
+
+		a {
+			text-decoration: underline;
+		}
+	}
+}
