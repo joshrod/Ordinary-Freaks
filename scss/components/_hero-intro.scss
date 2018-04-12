@@ -2,6 +2,22 @@
 	width: 100%;
 	height: 100%;
 	position: relative;
+	
+	.bg-video-container {
+		@include shift(0, -50%);
+		width: 100%;
+		height: 80%;
+		overflow: hidden;
+		position: absolute;
+		top: 50%;
+
+		#bg-video {
+			@include shift(0, -50%);
+			position: relative;
+			top: 50%;
+			min-width: 100%;
+		}
+	}
 
 	.hero-gif {
 		@include shift(0, -50%);
@@ -9,7 +25,6 @@
 		height: 80%;
 		position: absolute;
 		top: 50%;
-		background-image: url('../images/of-gif.gif');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
@@ -24,6 +39,57 @@
 			font-size: 3rem;
 			font-weight: 300;
 			white-space: nowrap;
+			@include mid-device {
+				font-size: 4rem;
+			}
+			@include tablet {
+				font-size: 5rem;
+			}
+		}
+
+		.play-button {
+			@include mid-device {
+				width: 6rem;
+				height: 6rem;
+			    &:hover {
+					width: 7rem;
+					height: 7rem;
+				}
+			}
+			@include tablet {
+				width: 8rem;
+				height: 8rem;
+			    &:hover {
+					width: 9rem;
+					height: 9rem;
+				}
+			}
+			@include sm-desktop {
+				width: 7rem;
+				height: 7rem;
+				&:hover {
+					width: 8rem;
+					height: 8rem;
+				}
+			}
+
+			.play {
+				@include mid-device {
+			        &:first-of-type {
+			          border-top: 14px solid transparent;
+			          border-bottom: 14px solid transparent;
+			          border-left: 21px solid white;
+					}
+				}
+				@include tablet {
+			        &:first-of-type {
+			          border-top: 16px solid transparent;
+			          border-bottom: 16px solid transparent;
+			          border-left: 24px solid white;
+					}
+				}
+
+			}
 		}
 	}
 

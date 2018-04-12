@@ -9,26 +9,38 @@ footer {
 
 		.icons {
 			margin: 4rem auto;
+			@include mid-device {
+				margin: 5rem auto;
+			}
 
 			a {
 				margin-left: 1.5rem;
 				margin-right: 1.5rem;
 				display: inline-block;
+				@include mid-device {
+					margin-left: 3rem;
+					margin-right: 3rem;
+				}
 
 				img {
 					width: auto;
 					height: 2.5rem;
+					@include mid-device {
+						height: 3rem;
+					}
 				}
 			}
 		}
 	}
 	
 	.copyright {
-		margin-bottom: 2rem;
 
 		h3 {
 			font-weight: 300;
 			font-size: 1.2rem;
+			@include mid-device {
+				font-size: 1.4rem;
+			}
 		}
 
 		a {

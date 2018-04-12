@@ -1,5 +1,4 @@
 .play-button {
-  @include shift(-50%, -50%);
   @include transitions(.2s);
   width: 5rem;
   height: 5rem;
@@ -10,6 +9,22 @@
     @include transitions(.2s);
     width: 6rem;
     height: 6rem;
+  }
+  @include tablet {
+    width: 6rem;
+    height: 6rem;
+    &:hover {
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+  @include sm-desktop {
+    width: 5rem;
+    height: 5rem;
+    &:hover {
+      width: 6rem;
+      height: 6rem;
+    }
   }
 
   .play {
@@ -22,5 +37,15 @@
       border-top: 10px solid transparent;
       border-bottom: 10px solid transparent;
       border-left: 15px solid white;
-  }
+      @include tablet {
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 18px solid white;
+      }
+      @include sm-desktop {
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 15px solid white;
+      }
+    }
 }

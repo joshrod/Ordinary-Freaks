@@ -1,10 +1,13 @@
 .newsletter {
- 	width: 80%;
+ 	width: 100%;
  	margin-top: 4rem;
  	margin-left: auto;
  	margin-right: auto;
- 	margin-bottom: 4rem;
  	position: relative;
+ 	@include sm-desktop {
+ 		max-width: 52rem;
+ 	}
+
 
 	.news-email {
 		width: 100%;
@@ -15,6 +18,13 @@
 		white-space: nowrap;
 		border: 2px solid black;
 		text-overflow: ellipsis;
+		@include tablet {
+			height: 4.5rem;
+			font-size: 2rem;
+		}
+		@include sm-desktop {
+			font-size: 1.8rem;
+		}
 	}
 
 	.submit-btn {
@@ -24,10 +34,21 @@
 		right: 0;
 		border: 1px solid black;
 		background-color: black;
-		display: none;
 		color: white;
+		display: none;
 		font-weight: 800;
-		animation: appear-from-inside .25s ease
+		animation: appear-from-inside .25s ease;
+		@include tablet {
+			width: 4.5rem;
+			font-size: 1.8rem;
+		}
+		@include sm-desktop {
+			font-size: 1.6rem;
+		}
+	}
+
+	.button-active {
+		display: block;
 	}
 }
 

@@ -1,6 +1,13 @@
 .grid-video {
 	width: 100%;
 	position: relative;
+	@include mid-device {
+		width: 50%;
+		float: left;
+	}
+	@include sm-desktop {
+		width: 33.333%;
+	}
 
 	.grid-thumbnail {
 		width: 100%;
@@ -23,6 +30,7 @@
 			left: 50%;
 
 			.play-button {
+				@include shift();
 				position: absolute;
 				top: calc(50% - 2rem);
 				left: 50%;
@@ -33,6 +41,12 @@
 				text-transform: uppercase;
 				font-size: 1.4rem;
 				text-align: center;
+				@include tablet {
+					font-size: 1.6rem;
+				}
+				@include sm-desktop {
+					font-size: 1.4rem;
+				}
 			}
 
 			

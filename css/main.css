@@ -42,15 +42,36 @@ a {
 
 .header {
   text-transform: uppercase;
-  margin-top: 4rem;
   font-size: 2.4rem; }
+  @media (min-width: 750px) {
+    .header {
+      font-size: 3rem; } }
 
-section {
+section, footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   overflow: hidden; }
+  @media (min-width: 550px) {
+    section, footer {
+      padding-top: 6rem;
+      padding-bottom: 6rem; } }
+  @media (min-width: 1010px) and (orientation: landscape) {
+    section, footer {
+      padding-top: 8rem;
+      padding-bottom: 8rem; } }
 
-.chevron::before {
+#about, #subscribe {
+  padding-left: 10%;
+  padding-right: 10%; }
+  @media (min-width: 550px) {
+    #about, #subscribe {
+      padding-left: 20%;
+      padding-right: 20%; } }
+
+.chevron:before {
   border-style: solid;
   border-width: 0.125rem 0.125rem 0 0;
+  border-color: #999;
   content: '';
   display: inline-block;
   height: 2.5rem;
@@ -61,6 +82,17 @@ section {
   vertical-align: top;
   width: 2.5rem; }
 
+@media (min-width: 750px) {
+  .chevron:before {
+    width: 4rem;
+    height: 4rem; } }
+
+#chevron-down {
+  transition: all 0.2s; }
+  #chevron-down:hover .chevron:before {
+    transition: all 0.2s;
+    border-color: white; }
+
 nav {
   width: 100%;
   height: 5rem;
@@ -68,23 +100,68 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2; }
-  nav h1 {
+  z-index: 2;
+  /*h1 {
+		@include shift(0, -50%);
+		position: absolute;
+		top: 50%;
+		left: 1.5rem;
+		text-transform: uppercase;
+		letter-spacing: .1rem;
+		font-weight: 800;
+		font-size: 2rem;
+		display: inline-block;
+		white-space: nowrap;
+	}*/ }
+  @media (min-width: 350px) {
+    nav {
+      height: 6.5rem; } }
+  @media (min-width: 750px) {
+    nav {
+      height: 10rem; } }
+  @media (min-width: 1010px) and (orientation: landscape) {
+    nav {
+      height: 8rem; } }
+  nav img {
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
+    width: auto;
+    height: 3.5rem;
     position: relative;
     top: 50%;
-    left: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    font-weight: 600;
-    font-size: 2rem; }
+    left: 1.5rem; }
+    @media (min-width: 350px) {
+      nav img {
+        height: 4rem; } }
+    @media (min-width: 750px) {
+      nav img {
+        height: 6rem;
+        left: 3rem; } }
+    @media (min-width: 1010px) and (orientation: landscape) {
+      nav img {
+        height: 5rem; } }
 
 .hero-intro {
   width: 100%;
   height: 100%;
   position: relative; }
+  .hero-intro .bg-video-container {
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%; }
+    .hero-intro .bg-video-container #bg-video {
+      -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      position: relative;
+      top: 50%;
+      min-width: 100%; }
   .hero-intro .hero-gif {
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
@@ -93,7 +170,6 @@ nav {
     height: 80%;
     position: absolute;
     top: 50%;
-    background-image: url("../images/of-gif.gif");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; }
@@ -105,6 +181,43 @@ nav {
       font-size: 3rem;
       font-weight: 300;
       white-space: nowrap; }
+      @media (min-width: 550px) {
+        .hero-intro .hero-overlay h3 {
+          font-size: 4rem; } }
+      @media (min-width: 750px) {
+        .hero-intro .hero-overlay h3 {
+          font-size: 5rem; } }
+    @media (min-width: 550px) {
+      .hero-intro .hero-overlay .play-button {
+        width: 6rem;
+        height: 6rem; }
+        .hero-intro .hero-overlay .play-button:hover {
+          width: 7rem;
+          height: 7rem; } }
+    @media (min-width: 750px) {
+      .hero-intro .hero-overlay .play-button {
+        width: 8rem;
+        height: 8rem; }
+        .hero-intro .hero-overlay .play-button:hover {
+          width: 9rem;
+          height: 9rem; } }
+    @media (min-width: 1010px) and (orientation: landscape) {
+      .hero-intro .hero-overlay .play-button {
+        width: 7rem;
+        height: 7rem; }
+        .hero-intro .hero-overlay .play-button:hover {
+          width: 8rem;
+          height: 8rem; } }
+    @media (min-width: 550px) {
+      .hero-intro .hero-overlay .play-button .play:first-of-type {
+        border-top: 14px solid transparent;
+        border-bottom: 14px solid transparent;
+        border-left: 21px solid white; } }
+    @media (min-width: 750px) {
+      .hero-intro .hero-overlay .play-button .play:first-of-type {
+        border-top: 16px solid transparent;
+        border-bottom: 16px solid transparent;
+        border-left: 24px solid white; } }
   .hero-intro a {
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
@@ -140,6 +253,15 @@ nav {
         left: 0;
         width: 100%;
         height: 100%; }
+        @media (orientation: landscape) {
+          .lightbox .center-video .video-wrapper #yt-video {
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 75%;
+            height: 80%;
+            top: 50%;
+            left: 50%; } }
 
 .cross {
   width: 2rem;
@@ -147,7 +269,8 @@ nav {
   position: fixed;
   top: 3rem;
   right: 2.2rem;
-  z-index: 5; }
+  z-index: 5;
+  cursor: pointer; }
   .cross:before, .cross:after {
     position: absolute;
     left: 0.8rem;
@@ -159,11 +282,15 @@ nav {
     transform: rotate(45deg); }
   .cross:after {
     transform: rotate(-45deg); }
+  @media (min-width: 750px) {
+    .cross {
+      width: 3rem;
+      height: 3.2rem;
+      right: 3rem; }
+      .cross:before, .cross:after {
+        height: 3.5rem; } }
 
 .play-button {
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   transition: all 0.2s;
   width: 5rem;
   height: 5rem;
@@ -174,6 +301,20 @@ nav {
     transition: all 0.2s;
     width: 6rem;
     height: 6rem; }
+  @media (min-width: 750px) {
+    .play-button {
+      width: 6rem;
+      height: 6rem; }
+      .play-button:hover {
+        width: 7rem;
+        height: 7rem; } }
+  @media (min-width: 1010px) and (orientation: landscape) {
+    .play-button {
+      width: 5rem;
+      height: 5rem; }
+      .play-button:hover {
+        width: 6rem;
+        height: 6rem; } }
   .play-button .play {
     -webkit-transform: translate(-55%, -50%);
     -ms-transform: translate(-55%, -50%);
@@ -186,10 +327,27 @@ nav {
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 15px solid white; }
+    @media (min-width: 750px) {
+      .play-button .play {
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 18px solid white; } }
+    @media (min-width: 1010px) and (orientation: landscape) {
+      .play-button .play {
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 15px solid white; } }
 
 .grid-video {
   width: 100%;
   position: relative; }
+  @media (min-width: 550px) {
+    .grid-video {
+      width: 50%;
+      float: left; } }
+  @media (min-width: 1010px) and (orientation: landscape) {
+    .grid-video {
+      width: 33.333%; } }
   .grid-video .grid-thumbnail {
     width: 100%;
     height: auto;
@@ -209,6 +367,9 @@ nav {
       top: 50%;
       left: 50%; }
       .grid-video .grid-overlay .grid-controls .play-button {
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
         position: absolute;
         top: calc(50% - 2rem);
         left: 50%; }
@@ -217,14 +378,22 @@ nav {
         text-transform: uppercase;
         font-size: 1.4rem;
         text-align: center; }
+        @media (min-width: 750px) {
+          .grid-video .grid-overlay .grid-controls h3 {
+            font-size: 1.6rem; } }
+        @media (min-width: 1010px) and (orientation: landscape) {
+          .grid-video .grid-overlay .grid-controls h3 {
+            font-size: 1.4rem; } }
 
 .newsletter {
-  width: 80%;
+  width: 100%;
   margin-top: 4rem;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 4rem;
   position: relative; }
+  @media (min-width: 1010px) and (orientation: landscape) {
+    .newsletter {
+      max-width: 52rem; } }
   .newsletter .news-email {
     width: 100%;
     height: 3.5rem;
@@ -234,6 +403,13 @@ nav {
     white-space: nowrap;
     border: 2px solid black;
     text-overflow: ellipsis; }
+    @media (min-width: 750px) {
+      .newsletter .news-email {
+        height: 4.5rem;
+        font-size: 2rem; } }
+    @media (min-width: 1010px) and (orientation: landscape) {
+      .newsletter .news-email {
+        font-size: 1.8rem; } }
   .newsletter .submit-btn {
     height: 100%;
     position: absolute;
@@ -241,10 +417,19 @@ nav {
     right: 0;
     border: 1px solid black;
     background-color: black;
-    display: none;
     color: white;
+    display: none;
     font-weight: 800;
     animation: appear-from-inside .25s ease; }
+    @media (min-width: 750px) {
+      .newsletter .submit-btn {
+        width: 4.5rem;
+        font-size: 1.8rem; } }
+    @media (min-width: 1010px) and (orientation: landscape) {
+      .newsletter .submit-btn {
+        font-size: 1.6rem; } }
+  .newsletter .button-active {
+    display: block; }
 
 @-webkit-keyframes appear-from-inside {
   from {
@@ -275,20 +460,31 @@ footer {
     padding-right: 1.5rem; }
   footer .social-media .icons {
     margin: 4rem auto; }
+    @media (min-width: 550px) {
+      footer .social-media .icons {
+        margin: 5rem auto; } }
     footer .social-media .icons a {
       margin-left: 1.5rem;
       margin-right: 1.5rem;
       display: inline-block; }
+      @media (min-width: 550px) {
+        footer .social-media .icons a {
+          margin-left: 3rem;
+          margin-right: 3rem; } }
       footer .social-media .icons a img {
         width: auto;
         height: 2.5rem; }
-  footer .copyright {
-    margin-bottom: 2rem; }
-    footer .copyright h3 {
-      font-weight: 300;
-      font-size: 1.2rem; }
-    footer .copyright a {
-      text-decoration: underline; }
+        @media (min-width: 550px) {
+          footer .social-media .icons a img {
+            height: 3rem; } }
+  footer .copyright h3 {
+    font-weight: 300;
+    font-size: 1.2rem; }
+    @media (min-width: 550px) {
+      footer .copyright h3 {
+        font-size: 1.4rem; } }
+  footer .copyright a {
+    text-decoration: underline; }
 
 .hero-intro .hero-gif .hero-overlay h3 {
   -webkit-transform: translate(-50%, -50%);
@@ -297,40 +493,56 @@ footer {
   position: absolute;
   top: calc(50% - 4rem);
   left: 50%; }
+  @media (min-width: 750px) {
+    .hero-intro .hero-gif .hero-overlay h3 {
+      top: calc(50% - 6rem); } }
 
 .hero-intro .hero-gif .hero-overlay .play-button {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   position: absolute;
-  top: calc(50% + 2rem);
+  top: calc(50% + 4rem);
   left: 50%;
   cursor: pointer; }
 
 #about {
   background-color: #fff;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
   #about .info {
     text-align: center;
-    margin: 3rem auto;
-    padding: 1.5rem; }
+    margin: 3rem auto; }
     #about .info img {
       width: 8rem;
       margin-bottom: 3rem; }
+      @media (min-width: 750px) {
+        #about .info img {
+          width: 12rem;
+          margin-bottom: 6rem; } }
+      @media (min-width: 1010px) and (orientation: landscape) {
+        #about .info img {
+          width: 10rem; } }
     #about .info h3 {
       color: black;
       font-weight: 400;
       font-size: 1.6rem; }
+      @media (min-width: 750px) {
+        #about .info h3 {
+          font-size: 2.2rem; } }
+      @media (min-width: 1010px) and (orientation: landscape) {
+        #about .info h3 {
+          font-size: 1.8rem; } }
 
 #past-episodes {
   text-align: center; }
   #past-episodes .videos {
     margin-top: 4rem;
-    margin-bottom: 4rem; }
-  #past-episodes a {
     margin-bottom: 4rem;
-    display: block; }
+    overflow: hidden; }
+    @media (min-width: 750px) {
+      #past-episodes .videos {
+        margin-top: 6rem;
+        margin-bottom: 6rem; } }
 
 #subscribe {
   background-color: white;
@@ -343,3 +555,11 @@ footer {
     color: black;
     font-weight: 400;
     font-size: 1.6rem; }
+    @media (min-width: 750px) {
+      #subscribe h3 {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        font-size: 2.2rem; } }
+    @media (min-width: 1010px) and (orientation: landscape) {
+      #subscribe h3 {
+        font-size: 1.8rem; } }

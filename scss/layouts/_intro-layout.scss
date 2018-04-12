@@ -9,12 +9,15 @@
 				position: absolute;
 				top: calc(50% - 4rem);
 				left: 50%;
+				@include tablet {
+					top: calc(50% - 6rem);
+				}
 			}
 
 			.play-button {
 				@include shift(-50%, -50%);
 				position: absolute;
-				top: calc(50% + 2rem);
+				top: calc(50% + 4rem);
 				left: 50%;
 				cursor: pointer;
 			}

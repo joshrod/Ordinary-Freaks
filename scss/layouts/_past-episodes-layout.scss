@@ -4,10 +4,10 @@
 	.videos {
 		margin-top: 4rem;
 		margin-bottom: 4rem;
-	}
-
-	a {
-		margin-bottom: 4rem;
-		display: block;
+		overflow: hidden;
+		@include tablet {
+			margin-top: 6rem;
+			margin-bottom: 6rem;
+		}
 	}
 }

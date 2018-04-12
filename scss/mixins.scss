@@ -25,3 +25,27 @@
 		@content;
 	}
 }
+
+@mixin mid-device {
+	@media (min-width: #{$mid-device}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$tablet}) {
+		@content;
+	}
+}
+
+@mixin sm-desktop {
+	@media (min-width: #{$sm-desktop}) and (orientation: landscape) {
+		@content;
+	}
+}
+
+@mixin landscape {
+	@media (orientation: landscape) {
+		@content;
+	}
+}

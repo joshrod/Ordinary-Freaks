@@ -1,22 +1,33 @@
 #about {
 	background-color: #fff;
 	position: relative;
-	overflow: hidden;
 	
 	.info {
 		text-align: center;
 		margin: 3rem auto;
-		padding: 1.5rem;
 
 		img {
 			width: 8rem;
 			margin-bottom: 3rem;
+			@include tablet {
+				width: 12rem;
+				margin-bottom: 6rem;
+			}
+			@include sm-desktop {
+				width: 10rem;
+			}
 		}
 
 		h3 {
 			color: black;
 			font-weight: 400;
 			font-size: 1.6rem;
+			@include tablet {
+				font-size: 2.2rem;
+			}
+			@include sm-desktop {
+				font-size: 1.8rem;
+			}
 		}
 	}
 }

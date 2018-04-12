@@ -5,6 +5,7 @@
 	top: 3rem;
 	right: 2.2rem;
 	z-index: 5;
+	cursor: pointer;
 	&:before, &:after {
 	  position: absolute;
 	  left: 0.8rem;
@@ -18,5 +19,13 @@
 	}
 	&:after {
 	  transform: rotate(-45deg);
+	}
+	@include tablet {
+		width: 3rem;
+		height: 3.2rem;
+		right: 3rem;
+		&:before, &:after {
+			height: 3.5rem;
+		}
 	}
 }

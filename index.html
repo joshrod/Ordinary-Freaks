@@ -5,7 +5,6 @@
 			<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 			<title>Ordinary Freaks</title>
 			<meta name="description" content="A show that documents ordinary individuals in their pursuit of obtaining their dreams.">
-			<meta name="author" content="Joshua Isaiah Rodriguez">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<!--[if IE]><link rel="shortcut icon" href="images/favicons/favicon-32.ico"><![endif]-->
 			<link rel="icon" href="images/favicons/favicon.png" type="image/x-icon" />
@@ -13,18 +12,19 @@
 			<!-- build:css css/main.min.css -->
 			<link type="text/css" rel="stylesheet" href="css/main.css" />
 			<!-- endbuild -->
-			<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,800,800i" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,800" rel="stylesheet">
 		</head>
 		<body>
 			<nav>
-				<h1>ordinary freaks</h1>
+				<img src="images/of-horz-wht.svg" alt="Ordinary Freaks Logo">
+				<!-- <h1>ordinary freaks</h1> -->
 			</nav>
 			<div class="hero-intro">
-				<!-- UNCOMMENT IF YOU DECIDE TO DO THE INTRO VIDEO INSTEAD OF THE GIF
-				<video autoplay muted controls>
-					<source src="images/of-intro.mp4" type="video/mp4">
-				</video>
-				-->
+				<div class="bg-video-container">
+					<video id="bg-video" autoplay muted loop>
+						<source src="images/of-intro.mp4" type="video/mp4">
+					</video>
+				</div>
 				<div class="hero-gif">
 					<div class="hero-overlay">
 						<h3>Our Latest Video</h3>
@@ -33,7 +33,7 @@
 						</div>
 					</div>	
 				</div>
-				<a href="#about">
+				<a id="chevron-down" href="#about">
 					<div class="chevron bottom"></div>
 				</a>
 			</div>
@@ -55,6 +55,28 @@
 				<h1 class="header">Past Episodes</h1>
 				<div class="videos">
 					<div class="grid-video">
+						<img class="grid-thumbnail" src="https://img.youtube.com/vi/fyLhHZLrEys/mqdefault.jpg" alt="Ordinary Freaks Thumbnail">
+						<div class="grid-overlay">
+							<div class="grid-controls">
+								<div class="play-button">
+									<div class="play"></div>
+								</div>
+								<h3>WHAT ARE YOU WILLING TO SACRIFICE?</h3>
+							</div>
+						</div>
+					</div>
+					<div class="grid-video">
+						<img class="grid-thumbnail" src="https://img.youtube.com/vi/A9xNksQOt6M/mqdefault.jpg" alt="Ordinary Freaks Thumbnail">
+						<div class="grid-overlay">
+							<div class="grid-controls">
+								<div class="play-button">
+									<div class="play"></div>
+								</div>
+								<h3>BE DIFFERENT, BE A MISFIT, BE YOURSELF</h3>
+							</div>
+						</div>
+					</div>
+					<div class="grid-video">
 						<img class="grid-thumbnail" src="https://img.youtube.com/vi/vNiIGIs2plQ/mqdefault.jpg" alt="Ordinary Freaks Thumbnail">
 						<div class="grid-overlay">
 							<div class="grid-controls">
@@ -72,7 +94,7 @@
 								<div class="play-button">
 									<div class="play"></div>
 								</div>
-								<h3>PRACTICE OVER TALENT!</h3>
+								<h3>PRACTICE OVER TALENT</h3>
 							</div>
 						</div>
 					</div>
@@ -83,7 +105,7 @@
 								<div class="play-button">
 									<div class="play"></div>
 								</div>
-								<h3>FOCUS ON WHO YOU ARE!</h3>
+								<h3>FOCUS ON WHO YOU ARE</h3>
 							</div>
 						</div>
 					</div>
@@ -94,12 +116,11 @@
 								<div class="play-button">
 									<div class="play"></div>
 								</div>
-								<h3>WORK HARDER ON YOURSELF!</h3>
+								<h3>WORK HARDER ON YOURSELF</h3>
 							</div>
 						</div>
 					</div>
 				</div>
-				<a href="https://www.youtube.com/channel/UCQuhRLynSeXxhZuafGdMEag/videos" target="_blank">Watch More Videos On Our YouTube Channel</a>
 			</section>
 			<section id="subscribe">
 				<h1 class="header">Subscribe</h1>
@@ -132,6 +153,7 @@
 					<h3>Designed by <a href="http://www.joshuaisaiah.com" target="_blank">Joshua Isaiah</a></h3>
 				</div>
 			</footer>
+			<script src="js/smoothscroll.js"></script>
 			<!-- build:js js/script.min.js -->
 			<script src="js/script.js"></script>
 			<!-- endbuild -->

@@ -6,15 +6,45 @@ nav {
 	top: 0;
 	left: 0;
 	z-index: 2;
+	@include md-mobile {
+		height: 6.5rem;
+	}
+	@include tablet {
+		height: 10rem;
+	}
+	@include sm-desktop {
+		height: 8rem;
+	}
 
-	h1 {
+	/*h1 {
 		@include shift(0, -50%);
-		position: relative;
+		position: absolute;
 		top: 50%;
 		left: 1.5rem;
 		text-transform: uppercase;
 		letter-spacing: .1rem;
-		font-weight: 600;
+		font-weight: 800;
 		font-size: 2rem;
+		display: inline-block;
+		white-space: nowrap;
+	}*/
+	img {
+		@include shift(0, -50%);
+		width: auto;
+		height: 3.5rem;
+		position: relative;
+		top: 50%;
+		left: 1.5rem;
+		@include md-mobile {
+			height: 4rem;
+		}
+		@include tablet {
+			height: 6rem;
+			left: 3rem;
+		}
+		@include sm-desktop {
+			height: 5rem;
+		}
 	}
+
 }
